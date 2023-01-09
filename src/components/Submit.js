@@ -1,5 +1,5 @@
 import '../style/Interface.css';
-function Interface(){
+function Submit(){
     
     return(
         
@@ -7,4 +7,4 @@ function Interface(){
     );
 }
 
-export default Interface;
+export default Submit;

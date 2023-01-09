@@ -1,6 +1,4 @@
-import react from "react";
 import "../../src/home.css";
-import { Link } from "react-router-dom";
 
 import insta from "../assets/insta.png";
 import gmail from "../assets/gmail1.png";

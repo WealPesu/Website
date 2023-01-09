@@ -1,0 +1,3 @@
+mongo_uri="mongodb+srv://Wealadmin:Wealpassadmin@weal.qqe6iql.mongodb.net/?retryWrites=true&w=majority"
+client_id="170400043446-u9pqnujt0h5ik89r83j1358o2bktj44e.apps.googleusercontent.com"
+client_secret="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"

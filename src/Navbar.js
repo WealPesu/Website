@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import GoogleLogin from "react-google-login";
-import { GoogleLogout } from "react-google-login";
 import { Link, NavLink } from "react-router-dom";
 import "../src/style/Navbar.css";
 import logo from "./assets/WEAL.png";
 import pesuLogo from "./assets/PES2.png";
 const Navbar = ({user}) => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
-  const [profilePic,setProfilePic] = useState(null)
-  const [isloggedin,setlogin] = useState(false)
   const logout=()=>{
     window.open("http://localhost:5000/auth/logout","_self")
   }
@@ -77,7 +73,7 @@ const Navbar = ({user}) => {
                 </NavLink>
               </li>
               </ul>
-                ):(<Link className="link-names toggler" style={{textDecoration:"none"}} to="/SignIn">Login with google</Link>)
+                ):(<Link className="link-names toggler" style={{textDecoration:"none",color:"white"}} to="/SignIn">Login</Link>)
               }
               
               

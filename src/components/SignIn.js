@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import Login from "./Login";
-import Logout from "./Logout";
+import React from "react";
 import { useEffect } from "react";
 import { gapi } from "gapi-script";
-import '../style/SignIn.css';
-const clientId = process.env.GOOGLE_CLIENT_ID
+import cover from "../assets/cover.png";
+import '../style/SignIn.scss';
+const clientId = process.env.CLIENT_ID
 const Contact=()=>{
     useEffect(()=>{
         function start(){
@@ -19,7 +18,7 @@ const Contact=()=>{
         window.open("http://localhost:5000/auth/google","_self")
     }
         return (<div>
-            <form className="form">
+            {/* <form className="form">
                 <h3 className="h3">Sign In</h3>
 
                 <div className="form-group">
@@ -44,10 +43,13 @@ const Contact=()=>{
                     <a href="#">Forgot Password?</a>
                 </p>
                 <h4>OR</h4>
-                <hr />
-                <div onClick={google} className="custom-control-label">Google</div>
+                <hr /> */}
+                <h1 className="heading-tag">WELCOME TO WEAL'S CONFESSION FORUM</h1>
+                <img src={cover} alt="coverpage" className="signin-cover" referrerPolicy="no-referrer"/>
+                {/* <div onClick={google} style={{position:"absolute",color:"white",bottom:"45%",left:"45%"}}>Google</div> */}
+                <button type="button" class="login-with-google-btn" onClick={google}>Sign in with Google</button>
                 {/* <Logout/> */}
-            </form>
+            {/* </form> */}
             </div>
         );
     }

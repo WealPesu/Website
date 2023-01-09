@@ -1,12 +1,11 @@
 import './style/App.css';
 import Blog from './components/Blog';
 import Home from './components/Home';
-import SignUP from './components/SignUP';
 import SignIn from './components/SignIn';
 import Submit from "./components/Submit"
 import Interface from './components/Interface';
 import Navbar from './Navbar';
-import { BrowserRouter,Routes,Route,Link,Navigate} from 'react-router-dom';
+import {Routes,Route,Navigate} from 'react-router-dom';
 import { useEffect ,useState} from 'react';
 
 const App=()=> {
@@ -37,10 +36,9 @@ const App=()=> {
     <>
     <Navbar user={user}/>
     <Routes>
-    <Route path="/Interface" element={user? <Navigate to ="/Interface"/>:<SignIn/>}/>
+    <Route path="/Interface" element={user? <Interface/>:<SignIn/>}/>
     <Route path="/" element={<Home/>}/>
-    <Route path="/Blog" element={user ? <Navigate to="/Blog"/>:<SignIn/>}/>
-    <Route path="/SignUP" element={<SignUP/>}/>
+    <Route path="/Blog" element={<Blog/>}/>
     <Route path="/SignIn" element={user ? <Navigate to="/"/>:<SignIn/>}/>
     <Route path="/submit" element={<Submit/>}/>
     </Routes>
